@@ -29,8 +29,8 @@ def create_type(type: typeSchema.TypeCreate, db: Session = Depends(get_db)):
 
 @typeroute.put("/Update/", response_model=typeSchema.Type)
 def update_type(type: typeSchema.TypeUpdate, db: Session = Depends(get_db)):
-    typeUpdate = typeRepository.get_type(db, type_id=type.id)
-    return typeRepository.update_type(db=db, type=typeUpdate )
+    #typeUpdate = typeRepository.get_type(db, type_id=type.id)
+    return typeRepository.update_type(db=db, type=type )
 
 @typeroute.delete("/Delete/", response_model=typeSchema.Type)
 def delete_type(type: typeSchema.TypeDelete, db: Session = Depends(get_db)):
