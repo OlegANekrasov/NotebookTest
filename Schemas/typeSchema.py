@@ -5,7 +5,10 @@ class TypeBase(BaseModel):
 
 class TypeCreate(TypeBase):
     pass
-
+class TypeUpdate(TypeBase):
+    id: str
+class TypeDelete(BaseModel):
+    id: str
 
 class Type(TypeBase):
     id: str
